@@ -21,7 +21,7 @@ class Menu extends React.Component{
                 }
                 <div>
                 </div>
-                <div class="button is-link is-outlined menuButton" onClick={this.toggleIdeco}>Idecoをシミュレーションする</div>
+                <div class="button is-link is-outlined menuButton" onClick={this.toggleIdeco}>iDeCoをシミュレーションする</div>
                 {this.state.isShowIdeco &&
                     <Ideco />
                 }
