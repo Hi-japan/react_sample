@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+
+#investmentAmount1 {
+  float: left; 
+  padding: 0.5rem;
+  width: 8rem;
+}
+
+#investmentAmount2 {
+  float: left; 
+  width: 7rem;
+}
+
+#investmentAmount3 {
+  float: left; 
+  padding: 0.5rem;
+}
+
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
+}
