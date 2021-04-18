@@ -15,11 +15,13 @@ class Menu extends React.Component{
     render(){
         return (
             <div className="container">
-                <a class="button is-link is-outlined" onClick={this.toggleReserveNisa}>つみたてnisaをシミュレーションする</a>
+                <div class="button is-link is-outlined menuButton" onClick={this.toggleReserveNisa}>つみたてnisaをシミュレーションする</div>
                 {this.state.isShowReserveNisa &&
                     <ReserveNisa />
                 }
-                <a class="button is-link is-outlined" onClick={this.toggleIdeco}>Idecoをシミュレーションする</a>
+                <div>
+                </div>
+                <div class="button is-link is-outlined menuButton" onClick={this.toggleIdeco}>Idecoをシミュレーションする</div>
                 {this.state.isShowIdeco &&
                     <Ideco />
                 }
