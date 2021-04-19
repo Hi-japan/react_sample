@@ -7,6 +7,7 @@ class Ideco extends React.Component{
         this.state = {
             isShowResult : false,
             result: "",
+            taxResult: "",
             isShowAnnualIncomeError : false,
             AnnualIncomeError: "",
             isShowAgeError : false,
@@ -111,11 +112,15 @@ class Ideco extends React.Component{
                 }
                 <div id="calc" class="button is-primary"　onClick={this.calc}>計算</div>
                 {this.state.isShowResult &&
-                    <div class="title is-4" id="result">
-                        {this.state.result}
+                    <div>
+                        <div class="title is-4" id="result">
+                            {this.state.result}
+                        </div>
+                        <div class="title is-4" id="result">
+                            {this.state.taxResult}
+                        </div>
                     </div>
                 }
-                
             </div>
         );
     }
@@ -340,14 +345,17 @@ class Ideco extends React.Component{
 
         const yild = total - base
 
-        const str = "投資元本: " + base.toLocaleString() + "円 + 運用利益: " +  yild.toLocaleString() + "円 = 合計: " + total.toLocaleString() + "円 + 節税: " + taxAvoidance.toLocaleString() + "円" 
-        
+        const str = "投資元本: " + base.toLocaleString() + "円 + 運用利益: " +  yild.toLocaleString() + "円 = 合計: " + total.toLocaleString() + "円"
+        const taxStr = "節税: " + taxAvoidance.toLocaleString() + "円" 
         this.setState({
             isShowResult: true
         })
 
         this.setState({
             result: str
+        })
+        this.setState({
+            taxResult: taxStr
         })
     }
 }
