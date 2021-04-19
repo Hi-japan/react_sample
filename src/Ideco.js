@@ -346,7 +346,7 @@ class Ideco extends React.Component{
         const yild = total - base
 
         const str = "投資元本: " + base.toLocaleString() + "円 + 運用利益: " +  yild.toLocaleString() + "円 = 合計: " + total.toLocaleString() + "円"
-        const taxStr = "節税: " + taxAvoidance.toLocaleString() + "円" 
+        const taxStr = "節税: " + Math.floor(taxAvoidance).toLocaleString() + "円" 
         this.setState({
             isShowResult: true
         })
